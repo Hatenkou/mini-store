@@ -1,4 +1,5 @@
 import { makeAutoObservable } from 'mobx'
+import images from '../../assets/img150-150.png'
 export default class DeviceStore {
    constructor() {
       this._types = [
@@ -16,11 +17,13 @@ export default class DeviceStore {
          { id: 4, name: 'Asus' },
       ]
       this._devices = [
-         { id: 1, name: 'iphon 12 pro', price: 212112, reting: 5, img: '' },
-         { id: 2, name: 'iphon 12 pro', price: 212112, reting: 5, img: '' },
-         { id: 3, name: 'iphon 12 pro', price: 212112, reting: 5, img: '' },
-         { id: 4, name: 'iphon 12 pro', price: 212112, reting: 5, img: '' },
-         { id: 5, name: 'iphon 12 pro', price: 212112, reting: 5, img: '' },
+         { id: 1, name: 'iphon 12 pro', price: 212112, rating: 5, img: images },
+         { id: 2, name: 'iphon 12 pro', price: 212112, rating: 5, img: images },
+         { id: 3, name: 'iphon 12 pro', price: 212112, rating: 5, img: images },
+         { id: 4, name: 'iphon 12 pro', price: 212112, rating: 5, img: images },
+         { id: 5, name: 'iphon 12 pro', price: 212112, rating: 5, img: images },
+         { id: 6, name: 'iphon 12 pro', price: 212112, rating: 5, img: images },
+         { id: 7, name: 'iphon 12 pro', price: 212112, rating: 5, img: images },
       ]
       this._selectedType = {}
       this._selectedBrand = {}

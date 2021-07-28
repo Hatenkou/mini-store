@@ -10,8 +10,10 @@ export default class DeviceStore {
 
       ]
       this._brands = [
-         { id: 2, name: 'Samsung' },
+         { id: 1, name: 'Samsung' },
          { id: 2, name: 'Apple' },
+         { id: 3, name: 'Lenovo' },
+         { id: 4, name: 'Asus' },
       ]
       this._devices = [
          { id: 1, name: 'iphon 12 pro', price: 212112, reting: 5, img: '' },

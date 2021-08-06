@@ -1,5 +1,5 @@
 import { ADMIN_ROUTE, BASKET_ROUTE, DEVICE_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "./utilis/consts";
-import AdminPage from "./components/pages/AdminPage";
+import Admin from "./components/pages/Admin";
 import Auth from "./components/pages/Auth";
 import Basket from "./components/pages/Basket"
 import DevicePage from "./components/pages/DevicePage"
@@ -9,7 +9,7 @@ import Shop from "./components/pages/Shop"
 export const authRoutes = [
    {
       path: ADMIN_ROUTE,
-      Component: AdminPage
+      Component: Admin
    },
    {
       path: BASKET_ROUTE,

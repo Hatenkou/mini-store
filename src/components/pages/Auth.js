@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Card, Container, Form, Row } from 'react-bootstrap';
 import { NavLink, useLocation } from 'react-router-dom';
+import { login, regisctration } from '../../http/userAPI';
 import { LOGIN_ROUTE, REGISTRATION_ROUTE } from '../../utilis/consts';
 
 
 const Auth = () => {
    const location = useLocation()
    const isLogin = location.pathname === LOGIN_ROUTE
-   console.log(location);
+   const [email, setEmail] = useState('')
+   const [password, setPassword] = useState('')
+   const click = async () => {
+      if (isLogin) {
+         const response = await login()
+      } else {
+         const response = await regisctration(email, password)
+         console.log(response);
+      }
+
+   }
+
+
    return (
       <Container
          className="d-flex justify-content-center align-items-center"
@@ -19,10 +32,15 @@ const Auth = () => {
                <Form.Control
                   className="mt-3"
                   placeholder=" Your email..."
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
                />
                <Form.Control
                   className="mt-3"
                   placeholder=" Your password..."
+                  value={password}
+                  onChange={e => setPassword(e.target.value)}
+                  type="password"
                />
                <Row className="d-flex ustify-content-between mt-3 pl-3 pr-3">
                   {isLogin ?
@@ -40,7 +58,9 @@ const Auth = () => {
                   }
                   <Button
                      className="mt-3 align-self-end"
-                     variant={"outline-success"}>
+                     variant={"outline-success"}
+                     onClick
+                  >
                      Enter
                   </Button>
                </Row>
